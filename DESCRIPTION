@@ -1,0 +1,28 @@
+Package: ameco
+Type: Package
+Title: Download AMECO Vintage
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Xavier", "Timbeau",
+      email = "xavier.timbeau@sciencespo.fr",
+      role = c("aut", "cre")
+    )
+  )
+Description: Donwload from EC website AMECO database for different vintages.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
+Imports:
+    cli,
+    dplyr,
+    stringr,
+    qs2,
+    glue,
+    tidyr,
+    tibble,
+    vroom,
+    lubridate,
+    purrr
+
