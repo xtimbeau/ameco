@@ -7,7 +7,7 @@
 ameco(version = "5/2025", reset = FALSE)
 }
 \arguments{
-\item{version}{(default 5/2025) version of AMECO (either 5/xxxx for spring forecast or 11/xxxx for autumn forecast)}
+\item{version}{(default 5/2025) version of AMECO (either 5/xxxx or spring xxxx for spring forecast or 11/xxxx autumn xxxx for autumn forecast)}
 
 \item{reset}{(download even if cache is present)}
 }
@@ -15,8 +15,5 @@ ameco(version = "5/2025", reset = FALSE)
 a tibble withn AMECO
 }
 \description{
-AMECO database
-}
-\examples{
-ameco()
+Télécharge et renvoie le fichier complet d'AMECO pour le vintage demandé. Les vintages disponibles sont ceux sur le site de la Commission Eruopéen de 2011 à 2025, avec deux prévisions par an (printemps et automne) et une préivison à l'hiver 2015.
 }

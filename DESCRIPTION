@@ -17,6 +17,7 @@ RoxygenNote: 7.3.3
 Imports:
     cli,
     dplyr,
+    curl,
     stringr,
     qs2,
     glue,

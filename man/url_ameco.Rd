@@ -4,7 +4,7 @@
 \alias{url_ameco}
 \title{Renvoie l'url du vintage AMECO}
 \usage{
-url_ameco(version = "5/2025")
+url_ameco(version = "52025")
 }
 \arguments{
 \item{version}{(defaut "5/2025") 5/xxxx pour la version de printemps, 11/2025 pour laversion d'automne}

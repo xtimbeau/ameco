@@ -1,5 +1,6 @@
 download_ameco <- function(url) {
-  download.file(url, destfile = "./.ameco/ameco.zip", quiet = TRUE)
+  dir.create(".ameco")
+  curl::curl_download(url, destfile = "./.ameco/ameco.zip", quiet = TRUE)
   ameco <- unzip(".ameco/ameco.zip", exdir = "./.ameco/tmp")
   if(file.exists(".ameco/tmp/ameco0.zip"))
     ameco <- unzip(".ameco/tmp/ameco0.zip", exdir = ".ameco/tmp")
@@ -32,5 +33,14 @@ download_ameco <- function(url) {
     dplyr::group_by(geo) |>
     dplyr::mutate(is.prev = year >= max(year) - 1) |>
     dplyr::ungroup()
-  return(dt)
+  meta <- list(
+    countries = dt |> dplyr::distinct(geo, country),
+    codes = dt |>
+      dplyr::group_by(code, c1, c2, unit_code, c4, subchapter, title) |>
+      dplyr::summarize(unit = list(unique(unit)), countries = list(unique(geo)))
+  )
+  dt <- dt |>
+    dplyr::select(-c(country, subchapter, title, unit))
+
+  return(list(data = dt, codes = meta$codes, countries = meta$countries))
 }

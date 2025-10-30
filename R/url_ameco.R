@@ -8,8 +8,7 @@
 #' @examples
 #' url_ameco("5/2025")
 
-url_ameco <- function(version = "5/2025") {
-  version <- stringr::str_remove(version, "/")
+url_ameco <- function(version = "52025") {
   ameco_url <- c(
     "52021"  = "https://economy-finance.ec.europa.eu/document/download/17372dca-211c-42b6-9a1d-89559b985d23_en?filename=ameco_spring2021.zip",
     "112021" = "https://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco_autumn2021.zip",
@@ -21,7 +20,5 @@ url_ameco <- function(version = "5/2025") {
     "112024" = "https://economy-finance.ec.europa.eu/document/download/9c2630c3-6c25-456d-b484-6b05c202e8ce_en?filename=ameco0.zip",
     "52025" = "https://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip"
   )
-  if(version %in% names(ameco_url))
-    return(ameco_url[[version]])
-  return(NULL)
+  return(ameco_url[[version]])
 }
