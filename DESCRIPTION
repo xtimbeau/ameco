@@ -1,7 +1,7 @@
 Package: ameco
 Type: Package
 Title: Download AMECO Vintage
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(
       "Xavier", "Timbeau",
