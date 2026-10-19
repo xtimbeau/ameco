@@ -19,7 +19,8 @@ url_ameco <- function(version = "11025") {
     "52024" = "https://economy-finance.ec.europa.eu/document/download/ad8d7bd0-c4d9-4860-b597-bb613408d6bd_en?filename=AMECO_2024_Spring_final.zip",
     "112024" = "https://economy-finance.ec.europa.eu/document/download/9c2630c3-6c25-456d-b484-6b05c202e8ce_en?filename=ameco0.zip",
     "52025" = "https://economy-finance.ec.europa.eu/document/download/b4b375e7-80a6-4581-b8fd-9c207790cd01_en?filename=ameco0.zip",
-    "112025" = "https://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip"
+    "112025" = "https://economy-finance.ec.europa.eu/document/download/92bd1d5e-35e8-4a94-a8b1-8d919ced4cdb_en?filename=ameco-autumn2025.zip",
+    "52026" = "https://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip"
   )
   return(ameco_url[[version]])
 }
